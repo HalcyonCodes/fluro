@@ -321,6 +321,17 @@ class FluroRouter {
     return match.route;
   }
 
+  //used with the [MaterialApp.onGenerateInitailRoute]
+  List<Route<dynamic>?> generatorInitail(String name) {
+    RouteMatch match = matchRoute(
+      null,
+      name,
+    );
+    List<Route<dynamic>?> result = [];
+    result.add(match.route);
+    return result;
+  }
+
   /// Prints the route tree so you can analyze it.
   void printTree() {
     _routeTree.printTree();

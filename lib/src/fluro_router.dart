@@ -322,13 +322,13 @@ class FluroRouter {
   }
 
   //used with the [MaterialApp.onGenerateInitailRoute]
-  List<Route<dynamic>?> generatorInitail(String name) {
+  List<Route<dynamic>> generatorInitail(String name) {
     RouteMatch match = matchRoute(
       null,
       name,
     );
-    List<Route<dynamic>?> result = [];
-    result.add(match.route);
+    List<Route<dynamic>> result = [];
+    result.add(match.route!);
     return result;
   }
 

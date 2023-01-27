@@ -152,7 +152,7 @@ class FluroRouter {
     RouteSettings settingsToUse = routeSettings ?? RouteSettings(name: path);
 
     if (settingsToUse.name == null) {
-      settingsToUse = settingsToUse.copyWith(name: path);
+      //settingsToUse = settingsToUse.copyWith(name: path);
     }
 
     AppRouteMatch? match = _routeTree.matchRoute(path!);
